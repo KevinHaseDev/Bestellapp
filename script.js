@@ -23,27 +23,45 @@ function renderMenu() {
         const myMenus = menus[i];
         menu.innerHTML += `
     <main>
-        <div>
-            <nav>
-                <a href="">Vorspeisen</a>
-                <a href="">Hauptspeisen</a>
-                <a href="">Desserts</a>
-                <a href="">Getränke</a>
-            </nav>
-        </div>
-        <h2>Vorspeisen</h2>
-            <p></p>
-            <p></p>
-        <h2>Hauptspeisen</h2>
-            <p></p>
-            <p></p>
-            <p></p>
-        <h2>Desserts</h2>
-            <p></p>
-            <p></p>
-        <h2>Getränke</h2>
-            <p></p>
-            <p></p>
-    </main>`
+    <div>
+        <nav>
+            <a href="#starter">Vorspeisen</a>
+            <a href="#main">Hauptspeisen</a>
+            <a href="#dessert">Desserts</a>
+            <a href="#drinks">Getränke</a>
+        </nav>
+    </div>
+    <h2 class="starter">Vorspeisen</h2>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+    <h2 class="main">Hauptspeisen</h2>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+    <h2 class="dessert">Desserts</h2>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+    <h2 class="drinks">Getränke</h2>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+        <h3 class="menu_name">${myMenus.name}</h3>
+            <p class="menu_ingredients">${myMenus.ingredients}</p>
+            <p class="menu_price">${myMenus.price}</p>
+</main>`
     }
 }
