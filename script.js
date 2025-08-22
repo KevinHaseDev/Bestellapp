@@ -103,3 +103,13 @@ let menus = [
         "price": 10.50
     }
 ]
+
+function init() {
+    let menu = document.getElementById("menu");
+    //menü anzeigen lassen
+    menu
+    //wert zurückgeben
+}
+function renderMenu() {
+    
+}
