@@ -23,6 +23,6 @@ function renderMenu() {
         const myMenus = menus[i];
         menu.innerHTML += menuTemplate(myMenus,i);
     }
-    return console.log(renderMenu());
+    return myMenus
     
 }
