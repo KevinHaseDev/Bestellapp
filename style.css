@@ -1,1 +1,8 @@
-
+header{
+    background-color: orangered;
+    height: 200px;
+}
+header img{
+    height: 100px;
+    width: 250px;
+}
