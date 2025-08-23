@@ -9,7 +9,8 @@ let menus = [
             "Natriumalginat",
             "Trockeneis"
         ],
-        "price": 12.50
+        "price": 12.50,
+        "category": "Vorspeise"
     },
     {
         "name": "Lachs-Tatar mit Wasabi-Luft",
@@ -21,7 +22,8 @@ let menus = [
             "Lecithin",
             "Sesam"
         ],
-        "price": 14.90
+        "price": 14.90,
+        "category": "Vorspeise"
     },
     {
         "name": "Zerlegter Cheeseburger",
@@ -33,7 +35,8 @@ let menus = [
             "Mini-Brioche",
             "Essiggurkenstaub"
         ],
-        "price": 18.90
+        "price": 18.90,
+        "category": "Hauptspeise"
     },
     {
         "name": "Sous-Vide Rinderfilet mit Rotwein-Gel & Stickstoff-Kartoffelchips",
@@ -45,7 +48,8 @@ let menus = [
             "Flüssiger Stickstoff",
             "Rosmarin"
         ],
-        "price": 26.50
+        "price": 26.50,
+        "category": "Hauptspeise"
     },
     {
         "name": "Vegane Textur-Bombe",
@@ -56,7 +60,8 @@ let menus = [
             "Quinoa-Crunch",
             "Basilikumöl"
         ],
-        "price": 17.50
+        "price": 17.50,
+        "category": "Hauptspeise"
     },
     {
         "name": "Schokoladen-Mousse mit Chili-Sphäre",
@@ -67,7 +72,8 @@ let menus = [
             "Natriumalginat",
             "Zucker"
         ],
-        "price": 9.90
+        "price": 9.90,
+        "category": "Dessert"
     },
     {
         "name": "Zitronen-Caviar mit Lavendel-Schaum",
@@ -78,7 +84,8 @@ let menus = [
             "Lavendelblüten",
             "Lecithin"
         ],
-        "price": 8.50
+        "price": 8.50,
+        "category": "Dessert"
     },
     {
         "name": "Frozen Mojito-Bites",
@@ -89,7 +96,8 @@ let menus = [
             "Zucker",
             "Flüssiger Stickstoff"
         ],
-        "price": 7.90
+        "price": 7.90,
+        "category": "Getränke"
     },
     {
         "name": "Blauer Plasma-Cocktail",
@@ -100,6 +108,7 @@ let menus = [
             "Essbares Leuchtpulver",
             "LED-Strohhalm"
         ],
-        "price": 10.50
+        "price": 10.50,
+        "category": "Getränke"
     }
 ]
