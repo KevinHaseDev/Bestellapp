@@ -25,7 +25,8 @@ function renderStarterMenu() {
         const myMenusStarter = menus[i];
         if (menus[i].category == "Vorspeise") {
             menuStarter.innerHTML += getMenuStarter(myMenusStarter, i);
-        }return myMenusStarter
+            return myMenusStarter
+        }
     }
 } 
 
@@ -36,7 +37,8 @@ function renderMainMenu() {
         const myMenusMain = menus[j];
         if (menus[j].category == "Hauptspeise") {
             menuMain.innerHTML += getMenuMain(myMenusMain, j);
-        }return myMenusMain
+            return myMenusMain
+        }
     }
 } 
 
@@ -46,7 +48,8 @@ function renderDessertMenu() {
         const myMenusDesserts = menus[k];
         if (menus[k].category == "Dessert") {
             menuDessert.innerHTML += getMenuDessert(myMenusDesserts, k);
-        }return myMenusDesserts
+            return myMenusDesserts
+        }
     }
 } 
 
@@ -56,6 +59,7 @@ function renderDrinksMenu() {
         const myMenusDrinks = menus[l];
         if (menus[l].category == "Getränke") {
             menuDrinks.innerHTML += getMenuDrinks(myMenusDrinks, l);
-        }return myMenusDrinks
+            return myMenusDrinks
+        }
     }
 } 
