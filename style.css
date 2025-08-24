@@ -18,10 +18,18 @@ header img {
     border-radius: 10px;
     margin: 8px 0;
     padding: 10px;
+    transition: background-color 0.4s ease;
+}
+.content:hover{
+    background-color: #014e3b;
 }
 
 main {
     margin: 0 20px;
+}
+
+.menu_name{
+color: #bfcfd6;
 }
 
 .menu_ingredients {
@@ -29,13 +37,11 @@ main {
 }
 
 .menu_price {
-    color: #509ca4;
-
+    color: #00e2e2;
 }
 
 nav {
     display: flex;
-
     background: linear-gradient(180deg, #00060a, #0b373d)
 }
 
@@ -45,7 +51,6 @@ nav {
     justify-content: space-around;
 
 }
-
 
 a {
     color: #509ca4;
@@ -60,9 +65,9 @@ a:hover {
 h1 {
     font-size: 50px;
     color: #bfcfd6;
-    
     margin-top: 10px;
 }
+
 h4{
     font-size: 25px;
     color: #bfcfd6;
@@ -74,11 +79,27 @@ h2 {
     color: #bfcfd6;
     margin: 20px 10px;
 }
+h3{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    background-color: #45525a00;
+    border: 0;
+
+}
+.btn:hover{
+    border-radius: 5px;
+    scale: 1.4;
+    cursor: pointer;
+}
 
 .main_img {
     height: 250px;
     width: 100%;
     object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .img_menu {
@@ -87,6 +108,7 @@ h2 {
     object-fit: cover;
     border-radius: 10px;
 }
+
 .rating{
     color: orange;
     margin-bottom: 10px;
