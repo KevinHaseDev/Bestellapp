@@ -25,10 +25,10 @@ function renderStarterMenu() {
         const myMenusStarter = menus[i];
         if (menus[i].category == "Vorspeise") {
             menuStarter.innerHTML += getMenuStarter(myMenusStarter, i);
-            return myMenusStarter
+
         }
     }
-} 
+}
 
 
 function renderMainMenu() {
@@ -37,10 +37,10 @@ function renderMainMenu() {
         const myMenusMain = menus[j];
         if (menus[j].category == "Hauptspeise") {
             menuMain.innerHTML += getMenuMain(myMenusMain, j);
-            return myMenusMain
+
         }
     }
-} 
+}
 
 function renderDessertMenu() {
     let menuDessert = document.getElementById("menu_dessert");
@@ -48,10 +48,10 @@ function renderDessertMenu() {
         const myMenusDesserts = menus[k];
         if (menus[k].category == "Dessert") {
             menuDessert.innerHTML += getMenuDessert(myMenusDesserts, k);
-            return myMenusDesserts
+
         }
     }
-} 
+}
 
 function renderDrinksMenu() {
     let menuDrinks = document.getElementById("menu_drinks");
@@ -59,7 +59,7 @@ function renderDrinksMenu() {
         const myMenusDrinks = menus[l];
         if (menus[l].category == "Getränke") {
             menuDrinks.innerHTML += getMenuDrinks(myMenusDrinks, l);
-            return myMenusDrinks
+
         }
     }
-} 
+}

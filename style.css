@@ -1,13 +1,58 @@
-header{
-    background-color: orangered;
-    padding: 10px 50px;
+body {
+    background-color: #00060a;
+    color: white;
 }
-header img{
-    height: 100px;
-    width: 250px;
+
+header {
+    ;
+    padding: 2px 20px;
 }
-.content{
-    border: 1px solid black;
+
+header img {
+    height: 200px;
+   width: 300px;
+}
+
+.content {
+    border: 1px solid rgb(0, 61, 61);
     border-radius: 10px;
     margin: 8px;
+    padding: 10px;
 }
+
+main {
+    margin: 0 20px;
+}
+
+.menu_ingredients {
+    color: #509ca4;
+}
+
+.menu_price {
+    color: #509ca4;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: #509ca4;
+    font-size: 30px;
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+a:hover {
+    color: white;
+}
+
+h1{
+    color: #bfcfd6;
+}
+h2{
+    color: #bfcfd6;
+}
+
