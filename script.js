@@ -31,6 +31,7 @@ function renderStarterMenu() {
 }
 
 
+
 function renderMainMenu() {
     let menuMain = document.getElementById("menu_main");
     for (let j = 0; j < menus.length; j++) {
