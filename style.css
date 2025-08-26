@@ -5,12 +5,41 @@ body {
 
 header {
     padding: 2px 20px;
-    background: linear-gradient(45deg, #00060a, #509ba3)
+    background: linear-gradient(45deg, #00060a, #509ba3);
 }
 
 header img {
     height: 100px;
     width: 200px;
+}
+
+.content_wrapper{
+display: flex;
+flex-direction: row;
+flex-grow: 1;
+gap: 2px;
+padding: 2px;
+}
+
+.main_content{
+width: calc(100% - 300px);
+padding: 16px;
+border: 2px solid paleturquoise;
+}
+
+.basket_wrapper{
+max-width: 300px;
+flex-grow: 1;
+padding: 16px;
+border: 2px solid paleturquoise;
+position: relative;
+
+}
+.basket{
+    width: 100%;
+    height: 400px;
+    position: sticky;
+    top: 0;
 }
 
 .content {
