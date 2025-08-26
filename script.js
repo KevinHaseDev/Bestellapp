@@ -14,54 +14,20 @@ function loadToLocalstorage() {
 }
 
 function renderMenu() {
-    renderStarterMenu();
-    renderMainMenu();
-    renderDessertMenu();
-    renderDrinksMenu();
-}
-function renderStarterMenu() {
     let menuStarter = document.getElementById("menu_starter");
-    for (let i = 0; i < menus.length; i++) {
-        const myMenusStarter = menus[i];
-        if (menus[i].category == "Vorspeise") {
-            menuStarter.innerHTML += getMenuStarter(myMenusStarter, i);
-
-        }
-    }
-}
-
-
-
-function renderMainMenu() {
     let menuMain = document.getElementById("menu_main");
-    for (let j = 0; j < menus.length; j++) {
-        const myMenusMain = menus[j];
-        if (myMenusMain.category == "Hauptspeise") {
-            menuMain.innerHTML += getMenuMain(myMenusMain, j);
-        } 
-        
-    }
-   
-}
-
-function renderDessertMenu() {
     let menuDessert = document.getElementById("menu_dessert");
-    for (let k = 0; k < menus.length; k++) {
-        const myMenusDesserts = menus[k];
-        if (menus[k].category == "Dessert") {
-            menuDessert.innerHTML += getMenuDessert(myMenusDesserts, k);
-
-        }
-    }
-}
-
-function renderDrinksMenu() {
     let menuDrinks = document.getElementById("menu_drinks");
-    for (let l = 0; l < menus.length; l++) {
-        const myMenusDrinks = menus[l];
-        if (menus[l].category == "Getränke") {
-            menuDrinks.innerHTML += getMenuDrinks(myMenusDrinks, l);
-
-        }
+    for (let i = 0; i < menus.length; i++) {
+        
+        if (menus[i].category == "Vorspeise") {
+            menuStarter.innerHTML += getMenuTemplate(menus[i], i);
+        }else if (menus[i].category == "Hauptspeise") {
+            menuMain.innerHTML += getMenuTemplate(menus[i], i);
+        }else if (menus[i].category == "Dessert") {
+            menuDessert.innerHTML += getMenuTemplate(menus[i], i);
+        }else if (menus[i].category == "Getränke") {
+            menuDrinks.innerHTML += getMenuTemplate(menus[i], i);
+        } 
     }
 }
