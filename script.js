@@ -46,7 +46,7 @@ function renderCart() {
     let basket = document.getElementById("basket");
     basket.innerHTML = "";
     for (let i = 0; i < cart.length; i++) {
-        basket.innerHTML += getCartTemplate(cart[i]);
+        basket.innerHTML += getCartTemplate(cart[i], i);
     }
 }
 
@@ -54,7 +54,7 @@ function saveCartToLocalstorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function onAddMenu(i, ) {
+function onAddMenu(i,) {
     let index = getMenuIndex(menus[i].name);
     if (index == -1) {
         cart.push({
@@ -77,12 +77,17 @@ function getMenuIndex(menuName) {
             return i;
         }
     } return -1;
-   
-}
-function reduceAmountCart(amount) {
-    amountReduceRef = amount - 1
-} 
 
-function addAmountCart(amount){
-amountAddRef = amount +1
+}
+function reduceAmountCart(i) {
+    cart[i].amount = cart[i].amount - 1;
+    if (cart[i].amount == 0) {
+        cart.splice(i, 1)
+    }
+    renderCart()
+}
+
+function addAmountCart(i) {
+    cart[i].amount = cart[i].amount + 1;
+    renderCart()
 } 
