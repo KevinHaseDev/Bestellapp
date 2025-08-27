@@ -1,5 +1,3 @@
-
-
 function init() {
     loadMenuToLocalstorage();
     loadCartToLocalstorge();
@@ -14,6 +12,7 @@ function loadMenuToLocalstorage() {
         menus = JSON.parse(localStorage.getItem("menus"));
     }
 }
+
 function loadCartToLocalstorge() {
     if (!localStorage.getItem("cart")) {
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -54,7 +53,7 @@ function saveCartToLocalstorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function onAddMenu(i,) {
+function onAddMenu(i) {
     let index = getMenuIndex(menus[i].name);
     if (index == -1) {
         cart.push({
@@ -66,8 +65,6 @@ function onAddMenu(i,) {
         cart[index].amount += 1;
     }
     saveCartToLocalstorage();
-    reduceAmountCart();
-    addAmountCart();
     renderCart();
 }
 
@@ -79,6 +76,7 @@ function getMenuIndex(menuName) {
     } return -1;
 
 }
+
 function reduceAmountCart(i) {
     cart[i].amount = cart[i].amount - 1;
     if (cart[i].amount == 0) {
@@ -91,3 +89,8 @@ function addAmountCart(i) {
     cart[i].amount = cart[i].amount + 1;
     renderCart()
 } 
+
+function deleteCart(){
+    cart = [];
+    renderCart();
+}
