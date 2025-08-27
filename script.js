@@ -55,10 +55,13 @@ function saveCartToLocalstorage() {
 
 function onAddMenu(i) {
     let index = getMenuIndex(menus[i].name);
+   let priceNumber = menus[i].price;
+    priceNumber = Math.round(priceNumber * 100) / 100;
+
     if (index == -1) {
         cart.push({
             name: menus[i].name,
-            price: menus[i].price,
+            price: priceNumber,
             amount: 1
         });
     } else {
@@ -82,15 +85,21 @@ function reduceAmountCart(i) {
     if (cart[i].amount == 0) {
         cart.splice(i, 1)
     }
+    saveCartToLocalstorage();
     renderCart()
 }
 
 function addAmountCart(i) {
     cart[i].amount = cart[i].amount + 1;
+    saveCartToLocalstorage();
     renderCart()
 } 
 
 function deleteCart(){
     cart = [];
+    saveCartToLocalstorage();
     renderCart();
 }
+
+// Ich brauche eine Funktion die alle Preise zusammen rechnet und das ergebnis in der div delete and purchase einfügt.
+// default wert wenn nichts im Warenkorb steht.
