@@ -39,26 +39,26 @@ padding: 16px;
     display: flex;
     flex-direction: column;
     position: sticky;
-    top: 130px; /* Abstand vom Header */
-    max-height: calc(100vh - 130px); /* passt sich Bildschirmhöhe an */
+    top: 130px; 
+    max-height: calc(100vh - 130px); 
     background-color: #00060a;
 }
 
 .basket {
-    flex: 1 1 auto;         /* nimmt restlichen Platz */
-    overflow-y: auto;       /* nur Inhalt scrollt */
+    flex: 1 1 auto;        
+    overflow-y: auto;      
     padding-right: 5px;  
-    width: 300px;   /* Platz für Scrollbar */
+    width: 310px;   
 }
 
 .delete_and_purchase {
-    flex-shrink: 0;         /* bleibt fix unten */
+    flex-shrink: 0;        
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background-color: #00060a; /* Hintergrund für gute Lesbarkeit */
+    background-color: #00060a; 
 }
 
 .delete_and_purchase button {
@@ -85,6 +85,10 @@ padding: 16px;
     scale: 1.3;
 }
 
+.cart_img{
+    width: 290px;
+    height: 600px;
+}
 
 .content {
     border: 1px solid rgb(0, 61, 61);

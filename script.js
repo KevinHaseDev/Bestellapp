@@ -43,10 +43,11 @@ function renderMenu() {
 
 function renderCart() {
     let basket = document.getElementById("basket");
-    basket.innerHTML = "";
+    basket.innerHTML = `<img class="cart_img" src="./assets/img/empty_cart.jpg" alt="slogan for empty cart">`;
     for (let i = 0; i < cart.length; i++) {
         basket.innerHTML += getCartTemplate(cart[i], i);
     }
+    allPriceAdd()
 }
 
 function saveCartToLocalstorage() {
@@ -55,13 +56,10 @@ function saveCartToLocalstorage() {
 
 function onAddMenu(i) {
     let index = getMenuIndex(menus[i].name);
-   let priceNumber = menus[i].price;
-    priceNumber = Math.round(priceNumber * 100) / 100;
-
     if (index == -1) {
         cart.push({
             name: menus[i].name,
-            price: priceNumber,
+            price: menus[i].price,
             amount: 1
         });
     } else {
@@ -93,13 +91,30 @@ function addAmountCart(i) {
     cart[i].amount = cart[i].amount + 1;
     saveCartToLocalstorage();
     renderCart()
-} 
+}
 
-function deleteCart(){
+function deleteCart() {
     cart = [];
     saveCartToLocalstorage();
     renderCart();
 }
 
-// Ich brauche eine Funktion die alle Preise zusammen rechnet und das ergebnis in der div delete and purchase einfügt.
+
 // default wert wenn nichts im Warenkorb steht.
+
+function allPriceAdd() {
+    let total = 0;
+    let basketSum = document.getElementById("basket_sum");
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].price * cart[i].amount;
+    }
+    if (cart.length === 0) {
+        basketSum.innerHTML = "";
+    } else {
+        basketSum.innerHTML = `
+            <div class="basket_total">
+                Gesamt: ${parseFloat(total.toFixed(2))} €
+            </div>
+        `;
+    }
+}
