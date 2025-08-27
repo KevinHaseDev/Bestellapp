@@ -10,13 +10,10 @@
     <link rel="shortcut icon" href="assets/icon/Favicon/Erstelle ein Favicon.png" type="image/x-icon">
 </head>
 <div class="wrapper">
-
-    <body onload="init()">
-        
-            <header>
-                <img src="./assets/icon/Ändere das Logo_ Set.png" alt="Logo">
-            </header>
-        
+    <body id="start" onload="init()">
+        <header>
+            <a class="header_a" href="#start"><img src="./assets/icon/Ändere das Logo_ Set.png" alt="Logo"></a>
+        </header>
         <main>
             <div class="content_wrapper">
                 <section class="main_content">
@@ -51,16 +48,16 @@
                 <section class="basket_wrapper">
                     <div class="basket" id="basket">
                     </div>
-                     <div id="basket_sum"></div>
+                    <div id="basket_sum"></div>
                     <div class="delete_and_purchase">
                         <button>Bestellen</button>
-                        <img class="delete_cart" onclick="deleteCart()" src="./assets/icon/delete.svg" alt="delete button">
+                        <img class="delete_cart" onclick="deleteCart()" src="./assets/icon/delete.svg"
+                            alt="delete button">
                     </div>
                 </section>
             </div>
         </main>
         <footer>
-
             <div class="social-media-container">
                 <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
                     <img src="./assets/icon/instagram.svg" alt="Instagram logo" class="social-media" /></a>
@@ -84,4 +81,3 @@
 <script src="script.js"></script>
 
 </html>
-

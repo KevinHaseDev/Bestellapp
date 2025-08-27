@@ -3,18 +3,12 @@ body {
     color: white;
 }
 
-.header_wrapper{
-    position: relative;
-    flex-grow: 1;
-}
-
 header {
     padding: 2px 20px;
     background: linear-gradient(45deg, #00060a, #509ba3);
     position: sticky;
-    top: 0;           
-    z-index: 1000;  
-    
+    top: 0;
+    z-index: 1000;
 }
 
 header img {
@@ -22,43 +16,63 @@ header img {
     width: 200px;
 }
 
-.content_wrapper{
-display: flex;
-flex-direction: row;
-flex-grow: 1;
-gap: 2px;
-padding: 2px;
+header img:hover {
+    scale: 1.2;
 }
 
-.main_content{
-width: calc(100% - 300px);
-padding: 16px;
+.header_wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 2px;
+    padding: 2px;
+}
+
+.main_content {
+    width: calc(100% - 300px);
+    padding: 16px;
+}
+
+main {
+    margin: 0 20px;
 }
 
 .basket_wrapper {
     display: flex;
     flex-direction: column;
     position: sticky;
-    top: 130px; 
-    max-height: calc(100vh - 130px); 
+    top: 130px;
+    max-height: calc(100vh - 130px);
     background-color: #00060a;
 }
 
 .basket {
-    flex: 1 1 auto;        
-    overflow-y: auto;      
-    padding-right: 5px;  
-    width: 310px;   
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-right: 5px;
+    width: 310px;
+}
+
+.cart_img {
+    width: 300px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .delete_and_purchase {
-    flex-shrink: 0;        
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background-color: #00060a; 
+    background-color: #00060a;
 }
 
 .delete_and_purchase button {
@@ -85,48 +99,15 @@ padding: 16px;
     scale: 1.3;
 }
 
-.cart_img{
-    width: 290px;
-    height: 600px;
-}
-
-.content {
-    border: 1px solid rgb(0, 61, 61);
-    border-radius: 10px;
-    margin: 8px 0;
-    padding: 10px;
-    transition: background-color 0.4s ease;
-}
-.content:hover{
-    background-color: #014e3b;
-}
-
-main {
-    margin: 0 20px;
-}
-
-.menu_name{
-color: #bfcfd6;
-}
-
-.menu_ingredients {
-    color: #509ca4;
-}
-
-.menu_price {
-    color: #00e2e2;
-}
-
 nav {
     display: flex;
-    background: linear-gradient(180deg, #00060a, #0b373d)
+    background: linear-gradient(180deg, #00060a, #0b373d);
 }
 
 .links {
     width: 100%;
     display: flex;
     justify-content: space-around;
-
 }
 
 a {
@@ -139,43 +120,40 @@ a:hover {
     color: white;
 }
 
-h1 {
-    font-size: 50px;
-    color: #bfcfd6;
-    margin-top: 10px;
+.content {
+    border: 1px solid rgb(0, 61, 61);
+    border-radius: 10px;
+    margin: 8px 0;
+    padding: 10px;
+    transition: background-color 0.4s ease;
 }
 
-h4{
-    font-size: 25px;
-    color: #bfcfd6;
-    margin-bottom: 50px;
+.content:hover {
+    background-color: #014e3b;
 }
 
-h2 {
-    font-size: 30px;
+.menu_name {
     color: #bfcfd6;
-    margin: 20px 10px;
 }
-h3{
-    display: flex;
-    justify-content: space-between;
-}
-.btn{
-    background-color: #45525a00;
-    border: 0;
 
+.menu_ingredients {
+    color: #509ca4;
 }
-.btn:hover{
-    border-radius: 5px;
-    scale: 1.4;
-    cursor: pointer;
+
+.menu_price {
+    color: #00e2e2;
 }
-.btn_amount{
-    background-color: #45525a00;
-    padding:0px 8px;
+
+.rating {
+    color: orange;
+    margin-bottom: 10px;
 }
-.btn_amount:hover{
-    scale: 1.2;
+
+.img_menu {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .main_img {
@@ -186,23 +164,54 @@ h3{
     margin-top: 20px;
 }
 
-.img_menu {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+.btn {
+    background-color: #45525a00;
+    border: 0;
 }
 
-.rating{
-    color: orange;
-    margin-bottom: 10px;
+.btn:hover {
+    border-radius: 5px;
+    scale: 1.4;
+    cursor: pointer;
 }
 
-footer{
+.btn_amount {
+    background-color: #45525a00;
+    padding: 0px 8px;
+}
+
+.btn_amount:hover {
+    scale: 1.2;
+}
+
+h1 {
+    font-size: 50px;
+    color: #bfcfd6;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #bfcfd6;
+    margin: 20px 10px;
+}
+
+h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+h4 {
+    font-size: 25px;
+    color: #bfcfd6;
+    margin-bottom: 50px;
+}
+
+footer {
     margin-top: 20px;
 }
 
-.my_footer{
+.my_footer {
     display: flex;
     justify-content: center;
 }
@@ -218,13 +227,13 @@ footer{
     height: auto;
     filter: invert(100%) brightness(200%);
     transition: filter 125ms ease;
-
 }
 
 .social-media:hover,
 .social-media:focus {
     filter: drop-shadow(0px 0px 5px #f7f5f3);
 }
+
 .legal-section {
     display: flex;
     justify-content: center;
