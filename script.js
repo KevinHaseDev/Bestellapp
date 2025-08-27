@@ -54,7 +54,7 @@ function saveCartToLocalstorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function onAddMenu(i) {
+function onAddMenu(i, ) {
     let index = getMenuIndex(menus[i].name);
     if (index == -1) {
         cart.push({
@@ -66,6 +66,8 @@ function onAddMenu(i) {
         cart[index].amount += 1;
     }
     saveCartToLocalstorage();
+    reduceAmountCart();
+    addAmountCart();
     renderCart();
 }
 
@@ -77,3 +79,10 @@ function getMenuIndex(menuName) {
     } return -1;
    
 }
+function reduceAmountCart(amount) {
+    amountReduceRef = amount - 1
+} 
+
+function addAmountCart(amount){
+amountAddRef = amount +1
+} 

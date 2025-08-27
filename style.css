@@ -130,6 +130,13 @@ h3{
     scale: 1.4;
     cursor: pointer;
 }
+.btn_amount{
+    background-color: #45525a00;
+    padding:0px 8px;
+}
+.btn_amount:hover{
+    scale: 1.2;
+}
 
 .main_img {
     height: 250px;
