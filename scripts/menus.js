@@ -1,3 +1,4 @@
+let cart = [];
 let menus = [
     {
         "name" : "Olivenperlen mit Gin-Tonic-Nebel",
