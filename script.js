@@ -1,11 +1,11 @@
 function init() {
     loadMenuToLocalstorage();
-    loadCartToLocalstorge();
+    loadCartFromLocalstorge();
     renderMenu();
     renderCart();
 }
 
-function loadCartToLocalstorge() {
+function loadCartFromLocalstorge() {
     if (!localStorage.getItem("cart")) {
         localStorage.setItem("cart", JSON.stringify(cart));
     } else {
@@ -23,21 +23,6 @@ function loadMenuToLocalstorage() {
 
 function saveCartToLocalstorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-function renderCart() {
-    let basket = document.getElementById("basket");
-    let headline = document.getElementById("cart_headline")
-    basket.innerHTML = "";
-    if (cart.length == 0) {
-        basket.innerHTML = `<img class="cart_img" src="./assets/img/empty_cart_two.jpg" alt="slogan for empty cart">`;
-        headline.classList.add("d_none");
-    } else {
-        for (let i = 0; i < cart.length; i++) {
-            basket.innerHTML += getCartTemplate(cart[i], i);
-        }
-    }
-    allPriceAdd();
 }
 
 function renderMenu() {
@@ -59,6 +44,27 @@ function renderMenu() {
     }
 }
 
+function renderCart() {
+    let basket = document.getElementById("basket");
+    let headline = document.getElementById("cart_headline")
+    let dialog = document.getElementById("dialog_section")
+    basket.innerHTML = "";
+    if (window.innerWidth <= 726) {
+        for (let i = 0; i < cart.length; i++) {
+            dialog.innerHTML += getCartTemplate(cart[i], i);
+            headline.classList.remove("d_none");
+        }
+    } else if (cart.length == 0) {
+        basket.innerHTML = `<img class="cart_img" src="./assets/img/empty_cart_two.jpg" alt="slogan for empty cart">`;
+        headline.classList.add("d_none");
+    } else {
+        for (let i = 0; i < cart.length; i++) {
+            basket.innerHTML += getCartTemplate(cart[i], i);
+            headline.classList.remove("d_none");
+        }
+    }
+    allPriceAdd();
+}
 function addAmountCart(i) {
     cart[i].amount = cart[i].amount + 1;
     saveCartToLocalstorage();
@@ -98,7 +104,6 @@ function reduceAmountCart(i) {
 function allPriceAdd() {
     let total = 0;
     let basketSum = document.getElementById("basket_sum");
-
     for (let i = 0; i < cart.length; i++) {
         total += cart[i].price * cart[i].amount;
     }
@@ -123,7 +128,26 @@ function getMenuIndex(menuName) {
     return -1;
 }
 
-function toggleOverlay() {
-    let overlayRef = document.getElementById("overlay")
-    overlayRef.classList.toggle("d_none")
+function openDialog() {
+    let dialogRef = document.getElementById("overlay")
+    dialogRef.showModal();
+    dialogRef.classList.add("opened")
+}
+function closeDialog() {
+    let dialogRef = document.getElementById("overlay")
+    dialogRef.close();
+    dialogRef.classList.remove("opened")
+}
+
+function clickToPurchase() {
+    let purchase = document.getElementById("purchase_dialog");
+    purchase.showModal();
+    deleteCart();
+    saveCartToLocalstorage();
+    renderCart();
+}
+
+function closePurchaseDialog() {
+    let purchase = document.getElementById("purchase_dialog");
+    purchase.close();
 }

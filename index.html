@@ -16,9 +16,29 @@
 </head>
 
 <div class="wrapper">
+
     <body id="start" onload="init()">
-        <dialog id="overlay" class="overlay"></dialog>
-        <header>
+        <dialog id="overlay" class="overlay">
+            <header class="dialog_header">
+                <h5></h5>
+                <button class="close_btn" onclick="closeDialog()"><img src="./assets/icon/close_button.svg"
+                        alt="close button"></button>
+            </header>
+            <section id="dialog_section">
+            </section>
+            <footer>
+                <div class="delete_and_purchase">
+                    <button onclick="clickToPurchase()">Bestellen</button>
+                    <img class="delete_cart" onclick="deleteCart()" src="./assets/icon/delete.svg" alt="delete button">
+                </div>
+            </footer>
+        </dialog>
+        <dialog id="purchase_dialog">
+            <p>Danke für deine Testbestellung</p>
+            <button onclick="closePurchaseDialog()">Schließen</button>
+        </dialog>
+
+        <header class="main_header">
             <a class="header_a" href="#start"><img src="./assets/icon/Ändere das Logo_ Set.png" alt="Logo"></a>
         </header>
         <main>
@@ -27,48 +47,49 @@
                     <img class="main_img" src="./assets/img/Hauptspeise.jpg" alt="Rinderfilet">
                     <h1>Küchenlabor </h1>
                     <h2>Molekulare Meisterwerke</h4>
-                    <p class="rating">Bewertung (4,8 von 5 Sternen)</p>
-                    <div>
-                        <nav>
-                            <img src="./assets/icon/Pfeil_Rechts.svg" alt="arrow right">
-                            <div class="links">
-                                <a href="#starter">Vorspeisen</a>
-                                <a href="#main">Hauptspeisen</a>
-                                <a href="#dessert">Desserts</a>
-                                <a href="#drinks">Getränke</a>
-                            </div>
-                        </nav>
-                    </div>
-                    <h3 id="starter">Vorspeisen</h2>
+                        <p class="rating">Bewertung (4,8 von 5 Sternen)</p>
+                        <div>
+                            <nav>
+                                <img src="./assets/icon/Pfeil_Rechts.svg" alt="arrow right">
+                                <div class="links">
+                                    <a href="#starter">Vorspeisen</a>
+                                    <a href="#main">Hauptspeisen</a>
+                                    <a href="#dessert">Desserts</a>
+                                    <a href="#drinks">Getränke</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <h3 id="starter">Vorspeisen
+                    </h2>
                     <img class="img_menu" src="./assets/img/Vorspeise.jpg" alt="starter">
                     <div id="menu_starter"></div>
                     <h3 id="main">Hauptspeisen</h2>
-                    <img class="img_menu" src="./assets/img/Hauptspeise.jpg" alt="Main menu">
-                    <div id="menu_main"></div>
-                    <h3 id="dessert">Desserts</h2>
-                    <img class="img_menu" src="./assets/img/Dessert.jpg" alt="Dessert">
-                    <div id="menu_dessert"></div>
-                    <h3 id="drinks">Getränke</h2>
-                    <img class="img_menu" src="./assets/img/Getränk.jpg" alt="Drink">
-                    <div id="menu_drinks"></div>
+                        <img class="img_menu" src="./assets/img/Hauptspeise.jpg" alt="Main menu">
+                        <div id="menu_main"></div>
+                        <h3 id="dessert">Desserts</h2>
+                            <img class="img_menu" src="./assets/img/Dessert.jpg" alt="Dessert">
+                            <div id="menu_dessert"></div>
+                            <h3 id="drinks">Getränke</h2>
+                                <img class="img_menu" src="./assets/img/Getränk.jpg" alt="Drink">
+                                <div id="menu_drinks"></div>
                 </section>
                 <section class="basket_wrapper">
                     <h5 id="cart_headline">Aromenspeicher</h3>
-                    <div class="basket" id="basket">
-                    </div>
-                    <div id="basket_sum"></div>
-                    <div class="delete_and_purchase">
-                        <button>Bestellen</button>
-                        <img class="delete_cart" onclick="deleteCart()" src="./assets/icon/delete.svg"
-                            alt="delete button">
-                    </div>
+                        <div class="basket" id="basket">
+                        </div>
+                        <div id="basket_sum"></div>
+                        <div class="delete_and_purchase">
+                            <button onclick="clickToPurchase()">Bestellen</button>
+                            <img class="delete_cart" onclick="deleteCart()" src="./assets/icon/delete.svg"
+                                alt="delete button">
+                        </div>
                 </section>
             </div>
         </main>
         <div class="btn_responsiv">
-         <button class="responsiv_btn" onclick="toggleOverlay()">Warenkorb</button>
+            <button class="responsiv_btn" onclick="openDialog()">Aromenspeicher</button>
         </div>
-         <footer>
+        <footer>
             <div class="social-media-container">
                 <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
                     <img src="./assets/icon/instagram.svg" alt="Instagram logo" class="social-media" /></a>
@@ -90,5 +111,6 @@
 <script src="scripts/menus.js"></script>
 <script src="scripts/template.js"></script>
 <script src="script.js"></script>
+
 </html>
 <dialog></dialog>

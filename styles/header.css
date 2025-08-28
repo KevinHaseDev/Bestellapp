@@ -1,4 +1,4 @@
-header {
+.main_header {
     padding: 2px 20px;
     background: linear-gradient(45deg, #00060a, #509ba3);
     position: sticky;
@@ -7,13 +7,13 @@ header {
 
 }
 
-header img {
+.main_header img {
     height: 100px;
     width: 200px;
     margin-left: 20px;
 }
 
-header img:hover {
+.main_header img:hover {
     scale: 1.2;
 }
 
@@ -31,6 +31,10 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+.dialog_header{
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width: 1080px) {
