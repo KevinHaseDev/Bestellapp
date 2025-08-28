@@ -1,0 +1,42 @@
+header {
+    padding: 2px 20px;
+    background: linear-gradient(45deg, #00060a, #509ba3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 100px;
+    width: 200px;
+}
+
+header img:hover {
+    scale: 1.2;
+}
+
+.header_wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+nav {
+    display: flex;
+    background: linear-gradient(180deg, #00060a, #0b373d);
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 1080px){
+    nav {
+        display: none;
+    }
+}
+

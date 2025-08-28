@@ -11,6 +11,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    background-color: #00060a;
+    color: white;
+}
+
 a {
     text-decoration: none;
 }

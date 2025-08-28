@@ -1,0 +1,50 @@
+footer {
+    margin-top: 20px;
+}
+
+.my_footer {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-media {
+    width: 40px;
+    height: auto;
+    filter: invert(100%) brightness(200%);
+    transition: filter 125ms ease;
+}
+
+.social-media:hover,
+.social-media:focus {
+    filter: drop-shadow(0px 0px 5px #f7f5f3);
+}
+
+.legal-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+    border-radius: 6px;
+    transition: background-color 125ms ease, color 125ms ease-in-out;
+}
+
+.legal-section a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 125ms ease;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.legal-section a:hover,
+.legal-section a:focus {
+    color: black;
+    filter: drop-shadow(0px 0px 5px #f7f5f3);
+}

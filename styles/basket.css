@@ -1,0 +1,56 @@
+.basket_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 130px;
+    max-height: calc(100vh - 130px);
+    background-color: #00060a;
+}
+
+.basket {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-right: 5px;
+    width: 310px;
+}
+
+.cart_img {
+    width: 300px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.delete_and_purchase {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #00060a;
+}
+
+.delete_and_purchase button {
+    flex: 1;
+    background-color: #509ca4;
+    border: none;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.delete_and_purchase button:hover {
+    background-color: #00e2e2;
+    color: black;
+}
+
+.delete_cart {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.delete_cart:hover {
+    scale: 1.3;
+}
