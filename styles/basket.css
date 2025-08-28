@@ -58,11 +58,14 @@
 .overlay{
     color: white;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 20px;
+    right: 0;
+    bottom: 0;
     height: 100vh;
     width: 100%;
     background-color: #00060a;
+    border-radius: 20px;
 }
 
 #purchase_dialog{
