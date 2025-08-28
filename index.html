@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="styles/basket.css">
     <link rel="shortcut icon" href="assets/icon/Favicon/Erstelle ein Favicon.png" type="image/x-icon">
 </head>
+
 <div class="wrapper">
     <body id="start" onload="init()">
+        <dialog id="overlay" class="overlay"></dialog>
         <header>
             <a class="header_a" href="#start"><img src="./assets/icon/Ändere das Logo_ Set.png" alt="Logo"></a>
         </header>
@@ -24,7 +26,7 @@
                 <section class="main_content">
                     <img class="main_img" src="./assets/img/Hauptspeise.jpg" alt="Rinderfilet">
                     <h1>Küchenlabor </h1>
-                    <h4>Molekulare Meisterwerke</h4>
+                    <h2>Molekulare Meisterwerke</h4>
                     <p class="rating">Bewertung (4,8 von 5 Sternen)</p>
                     <div>
                         <nav>
@@ -37,20 +39,21 @@
                             </div>
                         </nav>
                     </div>
-                    <h2 id="starter">Vorspeisen</h2>
+                    <h3 id="starter">Vorspeisen</h2>
                     <img class="img_menu" src="./assets/img/Vorspeise.jpg" alt="starter">
                     <div id="menu_starter"></div>
-                    <h2 id="main">Hauptspeisen</h2>
+                    <h3 id="main">Hauptspeisen</h2>
                     <img class="img_menu" src="./assets/img/Hauptspeise.jpg" alt="Main menu">
                     <div id="menu_main"></div>
-                    <h2 id="dessert">Desserts</h2>
+                    <h3 id="dessert">Desserts</h2>
                     <img class="img_menu" src="./assets/img/Dessert.jpg" alt="Dessert">
                     <div id="menu_dessert"></div>
-                    <h2 id="drinks">Getränke</h2>
+                    <h3 id="drinks">Getränke</h2>
                     <img class="img_menu" src="./assets/img/Getränk.jpg" alt="Drink">
                     <div id="menu_drinks"></div>
                 </section>
                 <section class="basket_wrapper">
+                    <h5 id="cart_headline">Aromenspeicher</h3>
                     <div class="basket" id="basket">
                     </div>
                     <div id="basket_sum"></div>
@@ -62,7 +65,10 @@
                 </section>
             </div>
         </main>
-        <footer>
+        <div class="btn_responsiv">
+         <button class="responsiv_btn" onclick="toggleOverlay()">Warenkorb</button>
+        </div>
+         <footer>
             <div class="social-media-container">
                 <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
                     <img src="./assets/icon/instagram.svg" alt="Instagram logo" class="social-media" /></a>
@@ -84,5 +90,5 @@
 <script src="scripts/menus.js"></script>
 <script src="scripts/template.js"></script>
 <script src="script.js"></script>
-
 </html>
+<dialog></dialog>

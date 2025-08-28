@@ -4,14 +4,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
 header img {
     height: 100px;
     width: 200px;
+    margin-left: 20px;
 }
 
 header img:hover {
@@ -34,9 +33,20 @@ nav {
     justify-content: space-around;
 }
 
-@media (max-width: 1080px){
+@media (max-width: 1080px) {
     nav {
         display: none;
     }
 }
 
+@media(max-width: 480px) {
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header img{
+        margin-left: 0px;
+    }
+}

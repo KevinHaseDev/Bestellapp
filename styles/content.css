@@ -68,3 +68,9 @@ a {
 a:hover {
     color: white;
 }
+
+@media(max-width: 726px){
+    .main_content{
+        flex-grow: 1;
+    }
+}

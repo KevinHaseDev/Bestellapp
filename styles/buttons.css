@@ -17,3 +17,24 @@
 .btn_amount:hover {
     scale: 1.2;
 }
+.btn_responsiv{
+    display: flex;
+    justify-content: center;
+}
+.responsiv_btn {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media(min-width: 727px) {
+    .responsiv_btn {
+        display: none;
+    }
+}

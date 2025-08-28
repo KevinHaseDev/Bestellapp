@@ -27,9 +27,11 @@ function saveCartToLocalstorage() {
 
 function renderCart() {
     let basket = document.getElementById("basket");
+    let headline = document.getElementById("cart_headline")
     basket.innerHTML = "";
     if (cart.length == 0) {
         basket.innerHTML = `<img class="cart_img" src="./assets/img/empty_cart_two.jpg" alt="slogan for empty cart">`;
+        headline.classList.add("d_none");
     } else {
         for (let i = 0; i < cart.length; i++) {
             basket.innerHTML += getCartTemplate(cart[i], i);
@@ -119,4 +121,9 @@ function getMenuIndex(menuName) {
         }
     }
     return -1;
+}
+
+function toggleOverlay() {
+    let overlayRef = document.getElementById("overlay")
+    overlayRef.classList.toggle("d_none")
 }
