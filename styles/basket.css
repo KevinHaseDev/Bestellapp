@@ -55,7 +55,7 @@
     scale: 1.3;
 }
 
-.overlay{
+.overlay {
     color: white;
     position: fixed;
     top: 20px;
@@ -68,18 +68,25 @@
     border-radius: 20px;
 }
 
-#purchase_dialog{
-  padding: 20px;
-  border: none;
-  border-radius: 10px;
-  background-color: #509ca4;
-  color: white;
-  font-size: 18px;
+.purchase_dialog {
+    text-align: center;
+    padding: 20px;
+    height: 200px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: #509ca4;
+    color: white;
+    font-size: 18px;
 }
-
-
-@media (max-width: 726px){
-    .basket_wrapper{
+@media(min-width: 726) {
+    .overlay{
         display: none;
     }
 }
+
+@media (max-width: 726px) {
+    .basket_wrapper {
+        display: none;
+    }
+} button

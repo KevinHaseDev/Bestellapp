@@ -49,17 +49,14 @@ function renderCart() {
     let headline = document.getElementById("cart_headline")
     let dialog = document.getElementById("dialog_section")
     basket.innerHTML = "";
-    if (window.innerWidth <= 726) {
-        for (let i = 0; i < cart.length; i++) {
-            dialog.innerHTML += getCartTemplate(cart[i], i);
-            headline.classList.remove("d_none");
-        }
-    } else if (cart.length == 0) {
+    dialog.innerHTML = "";
+    if (cart.length == 0) {
         basket.innerHTML = `<img class="cart_img" src="./assets/img/empty_cart_two.jpg" alt="slogan for empty cart">`;
         headline.classList.add("d_none");
-    } else {
+    }else {
         for (let i = 0; i < cart.length; i++) {
             basket.innerHTML += getCartTemplate(cart[i], i);
+            dialog.innerHTML += getCartTemplate(cart[i], i);
             headline.classList.remove("d_none");
         }
     }
@@ -99,6 +96,11 @@ function reduceAmountCart(i) {
     }
     saveCartToLocalstorage();
     renderCart();
+}
+function deleteCartArrayIndex(i) {
+    cart.splice(i, 1);
+    saveCartToLocalstorage(); 
+    renderCart();  
 }
 
 function allPriceAdd() {
